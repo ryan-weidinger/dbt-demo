@@ -1,0 +1,51 @@
+
+version: 2
+
+models:
+  - name: customer_master_target
+    description: "Example of a customer input master data schema"
+    columns:
+      - name: cust_id
+        description: "The primary key for this table, represents a unique customer"
+        data_tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "The first name of the customer"
+        data_tests:
+          - not_null
+      - name: last_name
+        description: "The last name of the customer"
+        data_tests:
+          - not_null
+      - name: email
+        description: "The email address of the customer"
+        data_tests:
+          - not_null
+      - name: phone
+        description: "The phone number of the customer"
+      - name: address
+        description: "The address of the customer"
+      - name: city
+        description: "The city of the customer"
+      - name: state 
+        description: "The state of the customer"
+      - name: zip 
+        description: "The zip code of the customer"
+      - name: country 
+        description: "The country of the customer"
+      - name: is_active
+        description: "Flag to indicate if the record is active"
+        data_tests:
+          - accepted_values:
+              values: [0, 1]
+          - not_null
+      - name: created_at
+        description: "The timestamp of when the record was created"
+        data_tests:
+          - not_null
+      - name: updated_at        
+        description: "The timestamp of when the record was last updated"
+      - name: deleted_at
+        description: "The timestamp of when the record was deleted"
+
