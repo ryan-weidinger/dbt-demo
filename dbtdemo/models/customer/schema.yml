@@ -28,10 +28,12 @@ models:
         description: "The address of the customer"
       - name: city
         description: "The city of the customer"
+      - name: county
+        description: "The county of the customer"
       - name: state 
         description: "The state of the customer"
-      - name: zip 
-        description: "The zip code of the customer"
+      - name: postal_code 
+        description: "The postal code code of the customer"
       - name: country 
         description: "The country of the customer"
       - name: is_active
